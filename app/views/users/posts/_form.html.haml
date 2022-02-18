@@ -1,0 +1,5 @@
+= simple_form_for [:users, @post] do |f|
+  = f.input :title
+  = f.input :content
+  = f.input :url
+  = f.button :submit, class: 'btn btn-primary mt-3'

@@ -13,7 +13,7 @@ module Niksen
     config.time_zone = 'Asia/Tokyo'
     config.i18n.default_locale = :ja
     config.generators do |g|
-      g.asset false
+      g.assets false
       g.helper false
       g.test_framework false
     end
