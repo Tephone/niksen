@@ -1,0 +1,22 @@
+!!!
+%html
+  %head
+    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
+    %title ニクセン
+    %meta{:content => "width=device-width,initial-scale=1", :name => "viewport"}/
+    = csrf_meta_tags
+    = csp_meta_tag
+    = stylesheet_pack_tag 'application'
+    = javascript_pack_tag 'application'
+  %body
+    .navbar.navbar-light.shadow
+      .container-fluid
+        .navbar-brand.h1
+          = link_to root_path do 
+            = image_tag 'logo.png', alt: 'ニクセン', class: 'header__logo-image'
+        .nav
+          .nav-item.me-3
+            = link_to 'ニクセンとは', about_path, class: 'header__link_content'
+          .nav-item.me-3
+            = link_to 'ユーザーログイン', new_user_session_path, class: 'header__link_content'
+    = yield

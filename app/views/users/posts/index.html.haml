@@ -1,0 +1,6 @@
+%h2 ニクセン体験記
+- @posts.each do |post|
+  .list-group
+    %a.list-group-item.list-group-item-action{href: users_post_path(post)}
+      = post.title
+= link_to 'ニクソン体験を投稿する', new_users_post_path, class: 'mt-3 btn btn-primary'
