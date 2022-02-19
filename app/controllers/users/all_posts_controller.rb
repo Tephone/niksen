@@ -9,7 +9,7 @@ class Users::AllPostsController < Users::ApplicationController
   end
 
   private
-  
+
   def set_post
     @post = current_user.posts.find(params[:id])
   end
