@@ -9,16 +9,16 @@
     = stylesheet_pack_tag 'application'
     = javascript_pack_tag 'application'
   %body
-    .navbar.navbar-light.bg-light
+    .navbar.navbar-light.shadow
       .container-fluid
         .navbar-brand.h1
-          %i.fas.fa-book
-          = link_to 'niksen', users_posts_path, class: 'text-dark text-decoration-none'
+          = link_to users_posts_path do 
+            = image_tag 'logo.png', alt: 'ニクセン', class: 'header__logo-image'
         .nav
           .nav-item.me-3
-            = link_to 'わたしのニクセン体験記', users_posts_path
-          .nav-item
-            = link_to 'ログアウト', destroy_user_session_path, method: :delete
+            = link_to 'わたしのニクセン体験記', users_posts_path, class: 'header__link_content'
+          .nav-item.me-3
+            = link_to 'ログアウト', destroy_user_session_path, method: :delete, class: 'header__link_content'
     .container.mt-4
       - if notice.present? 
         .alert-success.text-center

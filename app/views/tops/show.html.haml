@@ -1,2 +1,18 @@
-%h1 Tops#show
-%p Find me in app/views/tops/show.html.haml
+= image_tag '1.jpeg', id:'mypic', class: 'top__slideshow-image'
+
+:javascript
+  var pics_src = new Array("assets/1.jpeg","assets/2.jpeg","assets/3.jpeg","assets/4.jpeg","assets/5.jpeg","assets/6.jpeg");
+  var num = -1;
+
+  slideshow_timer();
+
+  function slideshow_timer(){
+    if (num == 5){
+        num = 0;
+    } 
+    else {
+        num ++;
+    }
+    document.getElementById("mypic").src=pics_src[num];
+    setTimeout("slideshow_timer()",2000); 
+  }
