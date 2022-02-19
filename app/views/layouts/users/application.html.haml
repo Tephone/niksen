@@ -18,6 +18,8 @@
           .nav-item.me-3
             = link_to 'わたしのニクセン体験記', users_posts_path, class: 'header__link_content'
           .nav-item.me-3
+            = link_to 'みんなのニクセン体験記', users_all_posts_path, class: 'header__link_content'
+          .nav-item.me-3
             = link_to 'ログアウト', destroy_user_session_path, method: :delete, class: 'header__link_content'
     .container.mt-4
       - if notice.present? 

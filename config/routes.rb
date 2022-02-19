@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   
   namespace :users do
     resources :posts
+    resources :all_posts, only: %i[index show]
   end
 
   resource :top, only: %i[show]

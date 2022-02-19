@@ -1,0 +1,5 @@
+%h2 ニクセン体験記
+- @posts.each do |post|
+  .list-group
+    %a.list-group-item.list-group-item-action{href: users_all_post_path(post)}
+      = post.title

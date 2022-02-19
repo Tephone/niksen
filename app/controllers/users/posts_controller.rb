@@ -2,7 +2,7 @@ class Users::PostsController < Users::ApplicationController
   before_action :set_post, only: %i[show edit update destroy]
 
   def index
-    @posts = current_user.posts
+    @posts = current_user.posts.default_order
   end
 
   def new
